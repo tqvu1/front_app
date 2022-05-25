@@ -1,0 +1,46 @@
+.top_search {
+  display: flex;
+  flex-direction: row;
+  margin: 0px auto;
+  .search-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .ant-form-item-with-help{
+      margin-bottom: 0px;
+    }
+    .ant-form-item-explain{
+      display: none;
+    }
+    input{
+      width: 420px;
+      height: 30px;
+    }
+    button{
+      margin-left: 20px;
+      width: 65px;
+      height: 30px;
+    }
+  }
+  .account-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 0px;
+    margin-left: 20px;
+    p{
+      font-size: 12px;
+      line-height: 16px;
+      color: @gray-1;
+      margin-bottom: 0px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .top_search {
+    display: none;
+  }
+}

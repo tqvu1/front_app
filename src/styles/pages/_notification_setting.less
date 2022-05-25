@@ -1,0 +1,100 @@
+.notification_setting {
+  min-height: 800px;
+  margin-top: 20px;
+
+  .note {
+    font-size: 14px;
+    color: @black;
+    font-weight: 400;
+    line-height: 19px;
+    margin-bottom: 20px;
+
+    .ant-typography {
+      margin: 0;
+    }
+  }
+
+  .search {
+    background: @white;
+    padding: 30px 20px 30px 20px;
+
+    .btn-search {
+      max-width: 170px;
+    }
+  }
+
+  .ant-checkbox-group .ant-checkbox-wrapper:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .ant-radio-group .ant-radio-wrapper:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .title_note {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .ant-card {
+    background: inherit;
+  }
+
+  .table {
+    margin-top: 50px;
+  }
+
+  .error_container {
+    background: @white;
+    .ant-typography {
+      color: @red-error;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .note {
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    .search {
+      padding: 30px 15px 30px 15px;
+    }
+
+    .ant-checkbox-group {
+      display: flex;
+      justify-content: space-between;
+      .ant-checkbox-wrapper:not(:last-child) {
+        margin-right: 0;
+      }
+      .ant-checkbox-wrapper span{
+        padding-right: 0;
+      }
+    }
+
+    .title_note {
+      margin-top: 0;
+      text-align: right;
+    }
+
+    .table_title {
+      text-align: center;
+    }
+
+    .table_button {
+      justify-content: center;
+      button {
+        width: 120px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    .table_button {
+      button {
+        width: auto;
+      }
+    }
+  }
+}
+

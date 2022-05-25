@@ -1,0 +1,53 @@
+.custom_table {
+  margin: 24px 0;
+  .ant-table {
+    border: 1px solid @dark-disabled;
+    a {
+      color: @primary-color;
+    }
+  }
+  .ant-table-thead th {
+    text-align: center;
+  }
+  .ant-table-cell {
+    text-align: center;
+  }
+  .ant-table-thead .ant-table-cell {
+    font-weight: 700;
+  }
+  &.header-primary {
+    .ant-table-thead th {
+      background: @primary-color;
+    }
+  }
+  &.header-color-white {
+    .ant-table-thead th {
+      color: @white;
+    }
+  }
+  .ant-pagination-total-text {
+    .ant-space-item, .ant-input-number, .ant-btn, .ant-select, .ant-select-selector, .ant-select-selection-search, .ant-select-selection-item, .ant-btn-sm, .ant-btn > span, .ant-input-number-input {
+      height: 24px !important;
+      line-height: 24px !important;
+    }
+    .ant-input-number {
+      width: 65px;
+    }
+    .ant-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .ant-pagination-total-text {
+      width: 100%;
+      text-align: right;
+
+      .show_total_space_container .ant-space-item:last-child {
+        display: none;
+      }
+    }
+  }
+}

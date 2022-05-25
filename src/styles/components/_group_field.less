@@ -1,0 +1,58 @@
+.group_field_row {
+  .ant-col:last-child {
+    padding-right: 0 !important;
+  }
+  .group_field_button {
+    padding: 6px 0;
+    span {
+      font-size: 12px;
+    }
+  }
+  .group_field_symbol {
+    display: block;
+    line-height: @height-base;
+    text-align: center;
+    color: @dark-disabled;
+  }
+  .image_upload {
+    height: 150px;
+    width: 150px;
+    display: block;
+    position: relative;
+    .error {
+      border: 1px solid @red-5;
+    }
+    &:hover {
+      .overlay {
+        display: flex;
+      }
+    }
+    .overlay {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: black;
+      opacity: 0.6;
+      transition: all 0.8s;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+      &_content {
+        text-align: center;
+        .ant-typography {
+          width: 100px;
+          color: white;
+          font-size: 12px;
+        }
+      }
+      .icon {
+        cursor: pointer;
+        color: white;
+        //transform: scale(1.3);
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+.signin_container {
+  width: 500px;
+  padding: 40px 50px 40px 50px;
+  margin-top: 120px;
+  margin-bottom: 50px;
+  background: @white;
+
+  .logo_signin {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .signin_title {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    margin: 20px 0px;
+  }
+
+  .signin_forgot {
+    cursor: pointer;
+    text-align: center;
+    color: @link-blue;
+    text-decoration: underline;
+  }
+
+  .caulate_trial {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 5px 0px;
+
+    &_link {
+      cursor: pointer;
+      color: @link-blue;
+      text-decoration: underline;
+    }
+  }
+
+  .signin_note {
+    border-top: 1px solid @gray-1;
+    margin-top: 50px;
+    padding-top: 12px;
+    font-size: 12px;
+    font-weight: 400;
+
+    p {
+      margin-bottom: 5px;
+      line-height: 16px;
+      color: @grey-2;
+    }
+  }
+
+  .signin_button {
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+.message {
+  background: @primary-color;
+  width: 500px;
+  margin-top: 50px;
+  text-align: center;
+  padding: 26px;
+
+  &_title {
+    color: @white;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  &_content {
+    color: @white;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .signin_container {
+    width: 500px;
+    padding: 40px 15px 40px 15px;
+    margin-top: 50px;
+    .logo_signin {
+      width: 170px;
+      height: 69px;
+    }
+    .signin_note {
+      font-size: 11px;
+    }
+  }
+}

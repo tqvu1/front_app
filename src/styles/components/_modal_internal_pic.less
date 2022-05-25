@@ -1,0 +1,40 @@
+.internal_pic_modal{
+  padding: 20px;
+  .ant-divider{
+    background-color: @primary-color;
+  }
+  .ant-table-content{
+    padding: 12px 20px 38px 20px;
+    background-color: @container-bg;
+  }
+  .ant-table-tbody{
+    background-color: @white;
+  }
+  .ant-table-thead {
+    .ant-table-cell{
+      border-bottom: 1px @primary-color solid;
+      font-weight: @bold;
+      font-size: @sm;
+      line-height: @xxl;
+    }
+  }
+  .ant-table-row{
+    margin-bottom: 10px;
+  }
+  .ant-input{
+    height: 44px;
+  }
+  .ant-btn{
+    height: 44px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .internal_pic_modal{
+    &_button_search {
+      margin-top: 48px;
+      margin-left: 10px;
+    }
+  }
+  
+}

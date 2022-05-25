@@ -1,0 +1,72 @@
+.ant-form-item-explain-error {
+  line-height: @height-base;
+  display: flex !important;
+  align-items: center;
+  padding: 5px 0;
+  font-size: 12px;
+  font-weight: 500;
+  word-break: break-all;
+  white-space: normal;
+  
+  >span {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.ant-form-item {
+  margin-bottom: 12px;
+  .ant-input, .ant-picker {
+    border: 1px solid @black;
+    &:focus{
+      // border-color: @primary-color;
+      border: 1px solid @primary-color;
+    }
+  }
+}
+
+.ant-form-item-label {
+  padding-bottom: 0 !important;
+
+  label {
+    margin-bottom: 10px !important;
+    font-weight: 700;
+  }
+}
+
+.ant-form-item-label>label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+  display: none;
+}
+
+.ant-form-item-label>label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::after {
+  display: inline-block;
+  text-align: center;
+  width: 26px;
+  height: 16px;
+  margin-left: 4px;
+  border-radius: 8px;
+  font-size: 9px;
+  background: @primary-color;
+  color: @white;
+  content: '必須';
+}
+
+.ant-form-item-label > label {
+  color: @black-2;
+}
+
+@media screen and (max-width: 768px) {
+  .ant-form-item {
+    input {
+      height: 44px;
+    }
+  }
+  .ant-picker {
+    height: 44px;
+    .ant-picker-input {
+      input {
+        height: auto;
+      }
+    }
+  }
+}

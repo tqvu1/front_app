@@ -1,0 +1,160 @@
+.modal-notification {
+  padding-bottom: 6px !important;
+  .justify-end {
+    gap: 0 !important;
+  }
+
+  .tag_label (@color, @content, @mr: 5px, @pt: 3px) {
+    display: inline-block;
+    text-align: center;
+    width: 26px;
+    height: 16px;
+    border-radius: 8px;
+    font-size: 9px;
+    background: @color;
+    color: @white;
+    padding-top: @pt;
+    padding-right: 1px;
+    margin-right: @mr;
+    content: @content;
+  }
+
+  .ant-form-item-label
+  > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+    .tag_label(@primary-color, '必須' , 5px , 3px);
+  }
+
+  .ant-form-item-label
+  > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::after {
+    display: none;
+  }
+
+  .input_tag {
+    .ant-form-item-label > label.ant-form-item-no-colon::before {
+      .tag_label(@grey-2, '任意' , 5px , 3px);
+    }
+  }
+
+  .upload_file {
+    width: 65px;
+    height: 30px;
+    border-radius: 3px;
+  }
+
+  .custom_card {
+    .ant-card-head {
+      border: none;
+    }
+  }
+
+  .introduction {
+    display: grid;
+    align-items: center;
+    padding-left: 10px;
+    color: @black;
+    font-weight: 500;
+  }
+
+  .input-textarea {
+    @media (min-width: 768px) {
+      .ant-form-item-control {
+        padding-left: 10px !important;
+      }
+    }
+  }
+
+  .group-input {
+    .ant-form-item {
+      margin-bottom: 0 !important;
+    }
+
+    .ant-picker {
+      max-width: 150px !important;
+    }
+  }
+
+  .ant-divider-horizontal {
+    margin: 30px 0 !important;
+    border-top-color: @primary-color;
+  }
+  .button_submit_notification {
+    width: 170px;
+    height: 44px;
+  }
+
+  .group-label .ant-typography {
+    font-weight: @bold;
+  }
+  .ant-space-item {
+    font-weight: @bold;
+  }
+  .ck-editor__editable_inline {
+    min-height: 225px;
+    border: 1px @black solid !important;
+  }
+
+  .ant-form-item-explain-error {
+    font-size: 12px !important;
+    font-weight: normal !important;
+  }
+
+  .ant-tabs-nav {
+    border-bottom: 1px @red-base solid;
+  }
+
+  .ant-row-center{
+    margin-top: -30px;
+  }
+
+  .ant-tabs-nav-wrap {
+    .ant-tabs-tab-active {
+      background-color: @primary-color;
+      .ant-tabs-tab-btn {
+        color: @white;
+      }
+    }
+
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: right;
+    }
+
+    .ant-tabs-tab {
+      display: flex;
+      justify-content: center;
+      border: 1px @red-base solid;
+      border-top-left-radius:3px;
+      border-top-right-radius:3px;
+      width: 102px;
+      height: 44px;
+      border-color: @primary-color !important;
+      font-weight: @bold;
+      color: @primary-color;
+      border-bottom: none;
+      @media (max-width: 768px) {
+        width: 94px;
+        height: 38px;
+      }
+    }
+  }
+  .upload-file  {
+    .ant-form-item-control-input-content{
+      margin-bottom: 20px;
+    }
+  }
+  .label_language {
+    font-size: 20px !important;
+    font-weight: @bold !important;
+    color: @red-base !important;
+  }
+  .title {
+    font-weight: @bold;
+    font-size: 14px;
+    color: @black-2;
+  }
+  @media (max-width: 844px) {
+    .label_language {
+      margin-right: 10px !important;
+    }
+  }
+}

@@ -1,0 +1,265 @@
+.basic_setting_container {
+  .form {
+    background-color: @white;
+    padding: 20px;
+
+    input {
+      height: 44px;
+    }
+
+    .tag_label (@color, @content, @mr: 5px, @pt: 3px) {
+      display: inline-block;
+      text-align: center;
+      width: 26px;
+      height: 16px;
+      border-radius: 8px;
+      font-size: 9px;
+      background: @color;
+      color: @white;
+      padding-top: @pt;
+      padding-right: 1px;
+      margin-right: @mr;
+      content: @content;
+    }
+    .ant-form-item-label
+      > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+      .tag_label(@primary-color, '必須');
+    }
+
+    .ant-form-item-label
+      > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::after {
+      display: none;
+    }
+
+    .input_any {
+      .ant-form-item-label > label.ant-form-item-no-colon::before {
+        .tag_label(@grey-2, '任意' , 5px , 1px);
+      }
+    }
+
+    &_label {
+      font-size: 14px;
+      font-weight: 700;
+      margin-left: 31px;
+      &_any::before {
+        .tag_label(@grey-2, '任意');
+      }
+      &_required::before {
+        .tag_label(@primary-color, '必須');
+      }
+    }
+
+    &_link {
+      color: @link-blue;
+      text-decoration: underline;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    &_divider {
+      border-top: 1px solid @gray-1;
+      margin: 20px 0;
+    }
+
+    &_checkbox_group {
+      text-align: end;
+      .ant-checkbox-wrapper:first-child {
+        margin-right: 40px;
+      }
+    }
+
+    &_radio_group {
+      .ant-radio-wrapper:first-child {
+        margin-right: 25px;
+      }
+    }
+
+    &_person {
+      height: 350px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      .ant-form-item-label {
+        padding-left: 36px;
+        label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+          display: none;
+        }
+      }
+
+      &_name {
+        .ant-form-item-label {
+          padding-left: 0;
+        }
+      }
+      &_required {
+        align-items: baseline;
+        .form_label {
+          margin-left: 0;
+        }
+        .form_label::before {
+          .tag_label(@primary-color, '必須', 7px, 2px);
+        }
+      }
+      &_label {
+        display: flex;
+        align-items: center;
+      }
+      &_sub_label {
+        .form_label {
+          margin-left: 33px;
+        }
+      }
+      &_row {
+        align-items: baseline;
+        justify-content: end;
+        .ant-row {
+          align-items: baseline;
+        }
+        .ant-form-item {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    &_select {
+      width: 100%;
+      margin-bottom: 20px;
+      .ant-select-selector {
+        border-color: @black;
+        height: 44px;
+        display: flex;
+        align-items: center;
+      }
+    }
+    &_hours {
+      align-items: baseline;
+      &_middle {
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+        font-size: 14px;
+        font-weight: 700;
+      }
+    }
+    &_business_day {
+      align-items: baseline;
+      .form_label {
+        margin-left: 9px;
+      }
+      &_text {
+        margin-top: 10px;
+      }
+      &_note {
+        margin-left: 9px;
+        color: @grey-2;
+        font-size: 12px;
+        font-weight: 400;
+      }
+      .ant-form-item {
+        margin-bottom: 0;
+      }
+    }
+    &_upload {
+      height: 44px;
+      .ant-upload-select-picture-card {
+        border: unset;
+        background-color: unset;
+        height: auto;
+        width: auto;
+        float: left;
+      }
+      .ant-upload-list-picture-card-container {
+        width: 44px;
+        height: 44px;
+        margin: 0;
+        .ant-upload-list-item {
+          padding: 1px;
+        }
+        .anticon-delete {
+          margin-left: 6px;
+        }
+      }
+    }
+    &_button {
+      height: 44px;
+    }
+    &_upload_label {
+      display: flex;
+      align-items: center;
+      height: 44px;
+      .form_label {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .submit_button {
+    display: flex;
+    justify-content: center;
+    button{
+    width: 170px;
+    height: 44px;
+    margin-bottom: 89px;
+    }
+  }
+
+  .note {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+}
+
+@media screen and (max-width: 992px) {
+  .basic_setting_container {
+    .form {
+      &_checkbox_group {
+        .ant-checkbox-wrapper {
+          margin-right: 0;
+          &:first-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .basic_setting_container {
+    .form {
+      &_label {
+        margin-left: 0px;
+      }
+
+      &_email {
+        margin-left: 25%;
+        margin-bottom: 20px;
+      }
+
+      &_checkbox_group {
+        text-align: start;
+        padding-left: 25%;
+        .ant-checkbox-wrapper:first-child {
+          margin-right: 29px;
+        }
+      }
+      &_person {
+        height: 390px;
+        .ant-form-item-label{
+          padding-left: 0;
+        }
+      }
+
+      &_radio_group {
+        .ant-radio-wrapper:first-child {
+          margin-right: 30px;
+        }
+      }
+    }
+
+    .note {
+      font-size: 12px;
+      font-weight: 500;
+    }
+  }
+}

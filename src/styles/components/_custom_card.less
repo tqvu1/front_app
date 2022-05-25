@@ -1,0 +1,26 @@
+.custom_card {
+  border: none !important;
+
+  .ant-card-head {
+    padding: 0;
+    .ant-card-head-title {
+      padding: 0;
+    }
+    .ant-typography{
+      font-weight: @bold;
+      color: @primary-color;
+      font-size: @h2;
+      line-height: @line_hight_h1;
+    }
+  }
+
+  .ant-card-body {
+    padding: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .ant-card-body{
+      padding: 0;
+    }
+  }
+}
